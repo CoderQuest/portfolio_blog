@@ -1,10 +1,15 @@
 var Blog = React.createClass({
 	render: function() {
+		var id = this.props.id.toString()
+		var blogIdPath = "/blogs/" + id
 		return (
 			<div className="blog">
-				<h3><a href= {this.props.id} >{this.props.title}</a></h3>
+				<h3><a href= "#" >{this.props.title}</a></h3>
 				<p>Written on {this.props.created_at}</p>
 				<p>{this.props.content}</p>
+					<button className="blogShowPath">
+				<a href={blogIdPath}>Read More</a>
+				</button>
 			</div>
 		);
 	}
@@ -25,4 +30,6 @@ var BlogList = React.createClass({
 		);
 	}
 });
+
+
 
