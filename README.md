@@ -1,2 +1,2 @@
 # portfolio_blog
-My portfolio page and a blog where I share my knowledge of everything rails 
+This is my experiment with building my portfolio and a blog page using React on Rails. 
