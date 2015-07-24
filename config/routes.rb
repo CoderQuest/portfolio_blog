@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'blogs#index'
+  get 'portfolio/index'
+
+  root 'portfolio#index'
   resources :blogs
 
   # The priority is based upon order of creation: first created -> highest priority.
