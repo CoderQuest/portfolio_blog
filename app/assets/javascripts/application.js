@@ -18,3 +18,10 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+$(document).ready(function() {
+	$('#main-img').click(function() {
+		console.log('you clicked');
+		alert('you clicked');
+	});
+})

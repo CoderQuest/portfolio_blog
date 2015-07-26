@@ -4,7 +4,7 @@ var Blog = React.createClass({
 		var blogIdPath = "/blogs/" + id
 		return (
 			<div className="blog">
-				<h3><a href= "#" >{this.props.title}</a></h3>
+				<h3>{this.props.title}</h3>
 				<p>Written on {this.props.created_at}</p>
 				<p>{this.props.content}</p>
 					<button className="blogShowPath">
@@ -22,10 +22,11 @@ var BlogList = React.createClass({
 		});
 
 		return (
-
-			<div className="blogNodes">
-				<h2>Most Recent Blogs</h2>
-				{blogNodes}
+			<div className="container">
+				<div className="blogNodes">
+					<h2>Recent Blogs</h2>
+					{blogNodes}
+				</div>
 			</div>
 		);
 	}
