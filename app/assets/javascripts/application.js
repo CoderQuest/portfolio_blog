@@ -20,8 +20,8 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$('#main-img').click(function() {
-		console.log('you clicked');
-		alert('you clicked');
+	$('a[href*=#]').on('click', function(event){     
+    	event.preventDefault();
+    	$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 	});
 })

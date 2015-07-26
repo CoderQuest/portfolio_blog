@@ -18,12 +18,12 @@ var Blog = React.createClass({
 var BlogList = React.createClass({
 	render: function() {
 		var blogNodes = this.props.blogs.map(function (blog) {
-			return <Blog title={blog.title} created_at={blog.created_at} content={blog.content} id={blog.id}/>
+			return <Blog title={blog.title} created_at={blog.created_at} content={blog.content} id={blog.id} key={blog.id}/>
 		});
 
 		return (
-			<div className="container">
-				<div className="blogNodes">
+			<div className="container" id="blog">
+				<div className="blogNodes" >
 					<h2>Recent Blogs</h2>
 					{blogNodes}
 				</div>

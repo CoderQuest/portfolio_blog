@@ -11,10 +11,10 @@ var MenuBanner = React.createClass({
                 </a>
               </div>
               <ul className="nav navbar-nav navbar-right menu-links">
-                <li><a href="#">About Yi</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li> 
-                <li><a href="#">Contact</a></li>              
+                <li><a href="#yi">About Yi</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li> 
+                <li><a href="#contact">Contact</a></li>              
               </ul>
             </div>
           </nav>
@@ -27,7 +27,7 @@ var MenuBanner = React.createClass({
 var MainImage = React.createClass({
   render: function() {
     return (
-      <div id="main-img">
+      <div id="yi">
         <p className="container">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -36,7 +36,6 @@ var MainImage = React.createClass({
           cillum dolore eu fugiat nulla pariatur. Excephjkteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <hr/>
       </div>
     );
   }
@@ -45,7 +44,7 @@ var MainImage = React.createClass({
 var ShowPortfolio = React.createClass({
   render: function() {
     return (
-      <div className="showPortfolio">
+      <div className="showPortfolio" id="portfolio">
         <div className="container ">
           <p>Interested in what work I have done? Below is a list of few projects that I have worked on and proud of.</p>
         </div>
@@ -82,8 +81,6 @@ var ShowPortfolio = React.createClass({
                     </div>
                   </div>
                 </div>
-
-
               </div>
             </div>
         </section>  
@@ -102,6 +99,7 @@ var PortfolioPage = React.createClass({
         <ShowPortfolio thumbNail1={this.props.thumbNail1} thumbNail2={this.props.thumbNail2} thumbNail3={this.props.thumbNail3} />
         <BlogList blogs={this.props.blogs}/>
         <Contact />
+        <Footer />
       </div>
     )
   }
