@@ -1,41 +1,17 @@
-var MenuBanner = React.createClass({
-	render: function() {
-		return ( 	
-      <div className="top-banner">
-        <div className="container">
-          <nav className="navbar top-navbar ">
-            <div className="container-fluid">
-              <div className="navbar-header" id="header">
-                <a className="navbar-brand logo" id="brand" href="#">
-                  <img src={this.props.logoSrc} />
-                </a>
-              </div>
-              <ul className="nav navbar-nav navbar-right menu-links">
-                <li><a href="#yi">About Yi</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li> 
-                <li><a href="#contact">Contact</a></li>              
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
-		);
-	}
-});
-
 var MainImage = React.createClass({
   render: function() {
     return (
       <div id="yi">
-        <p className="container">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excephjkteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div className="container jumbotron intro">
+          <h1>Full Stack Rails Web Developer</h1>
+          <p>
+             Specializing in Ruby, Ruby on Rails, Sinatra, HTML5/CSS3, Javascript, <br/>
+             React on Rails, and Responsive Design
+          </p>
+          <button type="button" className="btn btn-success">
+            <a href="#contact">Get in Touch</a>
+          </button>
+        </div>
       </div>
     );
   }
@@ -46,7 +22,8 @@ var ShowPortfolio = React.createClass({
     return (
       <div className="showPortfolio" id="portfolio">
         <div className="container ">
-          <p>Interested in what work I have done? Below is a list of few projects that I have worked on and proud of.</p>
+          <p>Interested in what work I have done? <br />
+          Below is a list of few projects that I have worked on </p>
         </div>
         <section className="projects">
             <div className="container"> 
@@ -94,11 +71,14 @@ var PortfolioPage = React.createClass({
   render: function(){
     return (
       <div className="portfolioPage">
-        <MenuBanner logoSrc={this.props.logoSrc}/>
-        <MainImage />
+        <MainImage profilePic={this.props.profilePic}/>
         <ShowPortfolio thumbNail1={this.props.thumbNail1} thumbNail2={this.props.thumbNail2} thumbNail3={this.props.thumbNail3} />
         <BlogList blogs={this.props.blogs}/>
-        <Contact />
+        <br />
+        <div className="container">
+          <p><a href="/blogs">See all blogs >> </a></p>
+        </div>
+        <Contact gmailIcon={this.props.gmailIcon} twitterIcon={this.props.twitterIcon} githubIcon={this.props.githubIcon} />
         <Footer />
       </div>
     )

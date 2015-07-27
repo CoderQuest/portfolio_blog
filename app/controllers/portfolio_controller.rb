@@ -1,6 +1,6 @@
 class PortfolioController < ApplicationController
   def index
-  	@blogs = Blog.order('created_at ASC').last(4)
+  	@blogs = Blog.last(4).reverse
   end
 
   def create

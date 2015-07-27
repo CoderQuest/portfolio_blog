@@ -38,6 +38,7 @@ body {
 	box-shadow: 0 0 15px rgba(0,0,0,0.75);
 	position: fixed;
 	width: 100%;
+	top: 0;
 	z-index: 1;		// prevent's the portfolio images from going on top as the web page scrolls down.
 }
 
@@ -71,6 +72,10 @@ body {
 		color: #FFFFFF;
 		background: none;
 	}
+
+	li a:focus {
+		background: transparent;
+	}
 }
 
 /********************
@@ -78,15 +83,29 @@ body {
 *********************/
 
 #yi {
-	background-image: image-url("laptop_table.jpg");
+	background-image: image-url("brown_desk.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
+	margin-top: 105px;
 
-	p {
-		padding-top: 300px;
-		padding-bottom: 250px;
+	div p {
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
+
+	div.intro {
+		background: none;
+		color: #FFFFFF;
+		padding-top: 230px;
+		
+		button a {
+			text-decoration: none;
+			color: #FFFFFF;
+		}	
+	}
+
+
 
 }
 
@@ -97,7 +116,6 @@ body {
 .showPortfolio {
 	text-align: center;
 	margin-top: 150px;
-	// margin-bottom: 50px;
 	font-size: 30px;
 	color: #3D3D3D;
 }
@@ -120,6 +138,23 @@ body {
 	padding-top: 50px;
 }
 
+span.written {
+	color: #003EFF;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.show-blog {
+	margin-top: 120px;
+}
+
+div.blog .content {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 /********************
   contact section
 *********************/
@@ -127,6 +162,13 @@ body {
 div.contact {
 	margin-top: 40px;
 	margin-bottom: 0;
+	text-align: center;
+}
+
+.social-link img {
+	max-width: 8%;
+	height: auto;
+	padding-top: 10px;
 }
 
 /********************

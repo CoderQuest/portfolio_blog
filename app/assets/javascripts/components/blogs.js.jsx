@@ -5,9 +5,9 @@ var Blog = React.createClass({
 		return (
 			<div className="blog">
 				<h3>{this.props.title}</h3>
-				<p>Written on {this.props.created_at}</p>
-				<p>{this.props.content}</p>
-					<button className="blogShowPath">
+				<p><span className="written">Written on</span> {this.props.created_at}</p>
+				<p className="content">{this.props.content}</p>
+				<button className="blogShowPath">
 				<a href={blogIdPath}>Read More</a>
 				</button>
 			</div>
@@ -18,9 +18,10 @@ var Blog = React.createClass({
 var BlogList = React.createClass({
 	render: function() {
 		var blogNodes = this.props.blogs.map(function (blog) {
-			return <Blog title={blog.title} created_at={blog.created_at} content={blog.content} id={blog.id} key={blog.id}/>
+			return (
+				<Blog title={blog.title} created_at={blog.created_at} content={blog.content} id={blog.id} key={blog.id}/>
+			)
 		});
-
 		return (
 			<div className="container" id="blog">
 				<div className="blogNodes" >

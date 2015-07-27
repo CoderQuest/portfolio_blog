@@ -9,7 +9,13 @@
 </head>
 <body>
 
-<%= yield %>
+		<% if params[:controller] == "blogs" && params[:action] == "index" || params[:controller] == "blogs" && params[:action] == "show"%>
+			<%= react_component('Sub', {logoSrc: image_path("white_logo.png")}, {prerender: true}) %>
+		<%else %>
+			<%= react_component('MenuBanner', {logoSrc: image_path("white_logo.png")}, {prerender: true}) %>
+		<% end %>
+		
+	<%= yield %>
 
 </body>
 </html>
