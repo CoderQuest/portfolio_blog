@@ -31,7 +31,7 @@ var ShowPortfolio = React.createClass({
 
                 <div className="col-md-4">
                   <div className="thumbnail project-thumb">
-                    <img src={this.props.thumbNail1} alt="..." />
+                    <img src={this.props.thumbNail1} />
                     <div className="caption">
                       <h3>Thumbnail label</h3>
                       <p>...</p>
@@ -41,7 +41,7 @@ var ShowPortfolio = React.createClass({
 
                  <div className="col-md-4">
                   <div className="thumbnail project-thumb">
-                    <img src={this.props.thumbNail2} alt="..." />
+                    <img src={this.props.thumbNail2} />
                     <div className="caption">
                       <h3>Thumbnail label</h3>
                       <p>...</p>
@@ -51,7 +51,7 @@ var ShowPortfolio = React.createClass({
 
                 <div className="col-md-4">
                   <div className="thumbnail project-thumb">
-                    <img src={this.props.thumbNail3} alt="..." />
+                    <img src={this.props.thumbNail3} />
                     <div className="caption">
                       <h3>Thumbnail label</h3>
                       <p>...</p>
