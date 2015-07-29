@@ -19,6 +19,8 @@ var BlogBox = React.createClass({
 		return (
 			<div className="blog-box">
 				<div className="container">
+					<div className="spacer">
+					</div>
 					<h2>New Blog</h2>
 					<BlogForm form={this.state.form} onBlogSubmit={this.handleBlogSubmit} />
 					</div>
