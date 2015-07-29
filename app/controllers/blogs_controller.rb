@@ -8,18 +8,32 @@ class BlogsController < ApplicationController
   end
 
   def new
-  	@blog = Blog.new
+  	@presenting = {
+      blogs: Blog.last(4).reverse,
+      form: {
+        action: blogs_path,
+        csrf_param: request_forgery_protection_token,
+        csrf_toke: form_authenticity_token
+      }
+    }
   end
   	
 
-  def create
-  	@blog = Blog.create(blog_params)
-  	redirect_to :back
+  def create  #this one handles both ajax& none-ajax scenarios
+    @blog = Blog.new(blog_params)
+    @blog.save
+
+    if request.xhr?
+      render json: Blog.last(4)
+    else
+      redirect_to blogs_path
+    end
+  	
   end
 
   private
 
   def blog_params
-  	params.require(:blog).permit(:avatar, :title, :content)
+  	params.require(:blog).permit(:title, :content)
   end
 end

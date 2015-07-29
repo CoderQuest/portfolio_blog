@@ -62,7 +62,6 @@ var ShowPortfolio = React.createClass({
             </div>
         </section>  
       </div>
-
     );
   }
 })

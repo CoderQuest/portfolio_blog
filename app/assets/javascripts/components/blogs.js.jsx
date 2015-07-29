@@ -26,7 +26,7 @@ var BlogList = React.createClass({
 			<div className="container" id="blog">
 				<div className="blogNodes" >
 					<h2>Recent Blogs</h2>
-					{blogNodes}
+					{blogNodes.reverse()}
 				</div>
 			</div>
 		);

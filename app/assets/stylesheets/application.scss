@@ -24,6 +24,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
+
 /*************************
 	Menu Banner
 **************************/
@@ -83,7 +84,7 @@ body {
 *********************/
 
 #yi {
-	background-image: image-url("brown_desk.jpg");
+	background-image: image_url("brown_desk.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -181,3 +182,13 @@ div.contact {
 	color: #FFFFFF;
 	text-align: center;
 }
+
+
+/********************
+  blog new page
+*********************/
+
+.spacer {
+	margin-top: 90px;
+}
+
